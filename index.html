@@ -22,7 +22,10 @@
 <audio id="background" src='sound/background.mp3'></audio>
 
 <canvas id="heart"></canvas>
-
+<script>
+    var audio = new Audio('https://github.com/hontrang/heart/blob/main/sound/background.mp3?raw=true');
+    audio.play();
+</script>
 <script>
     window.requestAnimationFrame =
             window.__requestAnimationFrame ||
@@ -44,7 +47,6 @@
                 };
             })();
     window.isDevice = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(((navigator.userAgent || navigator.vendor || window.opera)).toLowerCase()));
-    document.getElementById('background').play();
     var loaded = false;
     var init = function () {
         if (loaded) return;
