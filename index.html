@@ -19,6 +19,7 @@
 </HEAD>
 
 <BODY style=" background-color: #000;">
+<audio id="background" src='sound/background.mp3'></audio>
 
 <canvas id="heart"></canvas>
 
@@ -43,6 +44,11 @@
                 };
             })();
     window.isDevice = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(((navigator.userAgent || navigator.vendor || window.opera)).toLowerCase()));
+    window.addEventListener("DOMContentLoaded", event => {
+        const audio = document.querySelector("audio");
+        audio.volume = 0.2;
+        audio.play();
+        });
     var loaded = false;
     var init = function () {
         if (loaded) return;
